@@ -36,12 +36,14 @@ class LoginView(auth_views.LoginView):
     template_name = 'users/login.html'
     redirect_authenticated_user = True
 
+
 class LogoutView(LoginRequiredMixin, auth_views.LogoutView):
     """Logout View."""
 
+
 class UpdateProfileView(LoginRequiredMixin, UpdateView):
     """Update a user's profile view"""
-    template_name = 'users/update_profile.html'
+    template_name = 'users/_update_profile.html'
     model = Profile
     fields = ['website', 'biography', 'phone_number', 'picture']
     # Return success url

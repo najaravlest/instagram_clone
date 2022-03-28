@@ -1,39 +1,163 @@
 {% extends "users/base.html" %}
 
-{% block head_content %}
-    <title>Signup - Platzigram</title>
-{% endblock head_content %}
-{% block container %}
-	{% if form.errors %}
-		<div class="alert alert-danger alert-dismissible fade show" role="alert">
-			{{form.errors}}
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    			<span aria-hidden="true">&times;</span>
-  			</button>
-		</div>
+{% block title_content %}
+    <title>Outstamilligram-signup</title>
+{% endblock title_content %}
+
+{% block form_title %}
+    <div class="row">
+        <h2 class="small fw-bold mt-2 pt-1 mb-4 text-center">Do we know you already? <a
+                href="{% url 'users:login' %}"
+                class="link-danger">Login here !</a></h2>
+    </div>
+{% endblock form_title %}
+
+{% block form_content %}
+
+    {% if form.errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{form.errors}}
+        </div>
 	{% endif %}
 	{% if message %}
 		<div class="alert alert-info alert-dismissible fade show" role="alert">
 			{{message}}
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    			<span aria-hidden="true">&times;</span>
-  			</button>
 		</div>
 	{% endif %}
-	<form method="POST" action="{% url 'users:signup' %}">
-		{% csrf_token %}
-		{% for input in form %}
-			<div class="form-group">
-				{{input}}
-			</div>
-            <div class="invalid-feedback">
-                {% for error in input.errors %}{{ error }}{% endfor %}
+    <form method="POST" action="{% url 'users:signup' %}">
+        {% csrf_token %}
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <input
+                            type="text"
+                            id="form3Example1"
+                            class="form-control"
+                            name="first_name"/>
+                    <label class="form-label" for="form3Example1"
+                    >First name</label
+                    >
+                </div>
             </div>
-		{% endfor %}
+            <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <input
+                            type="text"
+                            id="form3Example2"
+                            class="form-control"
+                            name="last_name"/>
+                    <label class="form-label" for="form3Example2"
+                    >Last name</label
+                    >
+                </div>
+            </div>
+        </div>
 
-		<button type="submit" class="btn btn-outline-success btn-block mt-5"><i class="lead">Register!</i></button>	
-	</form>
-		<div class="mx-auto mt-1" style="width: 300px;">
-		<p>Already registered? <a href="{% url "users:login" %}">Sign In</a></p>
-	</div>
-{% endblock container %}
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input
+                    type="email"
+                    id="form3Example3"
+                    class="form-control"
+                    name="email"/>
+            <label class="form-label" for="form3Example3"
+            >Email address</label
+            >
+        </div>
+        <!-- User input -->
+        <div class="form-outline mb-4">
+            <input
+                    type="text"
+                    id="form3Example6"
+                    class="form-control"
+                    name="username"
+            />
+            <label class="form-label" for="form3Example6"
+            >Username</label
+            >
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <input
+                            type="password"
+                            id="form3Example4"
+                            class="form-control"
+                            name="password" required/>
+                    <label class="form-label" for="form3Example4"
+                    >Password</label
+                    >
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                    <input
+                            type="password"
+                            id="form3Example5"
+                            class="form-control"
+                            name="password_confirmation" required/>
+                    <label class="form-label" for="form3Example5"
+                    >Password confirmation</label
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div
+                class="form-check d-flex justify-content-center mb-4"
+        >
+            <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form2Example33"
+                    checked
+            />
+            <label class="form-check-label" for="form2Example33">
+                Accept terms and conditions
+            </label>
+        </div>
+
+        <!-- Submit button -->
+        <button
+                type="submit"
+                class="btn btn-primary btn-block mb-4"
+        >
+            Sign up
+        </button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+            <p>or sign up with:</p>
+            <button
+                    type="button"
+                    class="btn btn-link btn-floating mx-1"
+            >
+                <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button
+                    type="button"
+                    class="btn btn-link btn-floating mx-1"
+            >
+                <i class="fab fa-google"></i>
+            </button>
+
+            <button
+                    type="button"
+                    class="btn btn-link btn-floating mx-1"
+            >
+                <i class="fab fa-twitter"></i>
+            </button>
+
+            <button
+                    type="button"
+                    class="btn btn-link btn-floating mx-1"
+            >
+                <i class="fab fa-github"></i>
+            </button>
+        </div>
+    </form>
+{% endblock form_content %}

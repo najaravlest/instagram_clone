@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% block head_content %}
+	{% endblock head_content %}
+	{% block title_content %}
+    {% endblock %}
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
+            rel="stylesheet"
+    />
+
+</head>
+<body>
+
+    {% include "_nav.html" %}
+	<span class="container"></span>
+    <div class="container mt-5">
+        {% block container %}
+        {% endblock%}
+    </div>
+<!-- Footer -->
+    {% load static %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+        <!-- Container wrapper -->
+        <div class="container-fluid" style="justify-content: center;background-color: #b3d3f5b5;">
+            <!-- Toggle button -->
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="/"> bookwormbrain.com</a>
+                </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Footer -->
+</body>
+
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
+></script>
+
+</html>

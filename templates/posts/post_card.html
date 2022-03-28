@@ -1,13 +1,21 @@
-<div class="col-sm-12 col-md-8 offset-md-2 mt-5 p-0 post-container">
-    <a href="{% url "users:detail" post.profile.user.username %}" style='color: inherit;text-decoration: inherit;'>
-        <div class="media pt-3 pl-3 pb-1">
-                <img class="mr-3 rounded-circle" height="35" src="{{ post.profile.picture.url }}" alt="{{ post.user.get_full_name }}">
+<div class="card col-sm-12 col-md-8 offset-md-2 mt-5 p-0 post-container" style="
+    border: 0;
+    box-shadow: 3px 5px 20px 0px rgb(0 0 0), 0 4px 6px -2px rgb(0 0 0 / 5%);
+    padding: 10px!important;
+">
+    <a href="{% url 'users:detail' post.profile.user.username %}" style='color: inherit;text-decoration: inherit;'>
+        <div class="row media pt-3 pl-3 pb-1">
+            <div class="col-1">
+                <img class="rounded-circle" height="35" src="{{ post.profile.picture.url }}" alt="{{ post.user.get_full_name }}">
+            </div>
+            <div class="col-4">
                 <div class="media-body">
                     <p style="margin-top: 5px;">{{ post.profile.user.get_full_name  }}</p>
                 </div>
+            </div>
         </div>
     </a>
-    <a href="{% url "posts:detail" post.id %}">
+    <a href="{% url 'posts:detail' post.id %}">
         <img style="width: 100%;" src="{{ post.photo.url }}" alt="{{ post.title }}">
     </a>
     <p class="mt-1 ml-2" >

@@ -14,7 +14,7 @@ class SignupForm(forms.Form):
     # Por default los valores son requeridos
     username = forms.CharField(
         min_length=5,
-        max_length=50,
+     max_length=50,
         widget=forms.TextInput(attrs={'placeholder': 'Username','class': 'form-control'})
     )
     password = forms.CharField(
