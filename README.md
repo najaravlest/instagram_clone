@@ -15,14 +15,8 @@ Steps:
 7. python manage.py runserver
 
 
+<img width="1792" alt="Screenshot 2022-03-28 at 7 23 49 PM" src="https://user-images.githubusercontent.com/89101200/160418006-29de59a1-2443-434a-9c6d-3a1e225b2701.png">
 
-![](../../../../var/folders/j1/w737rkrx5tj77_4ndd4wl2cw0000gp/T/TemporaryItems/NSIRD_screencaptureui_9ISHcS/Screenshot 2022-03-28 at 7.22.11 PM.png)
 
-![](../../../../var/folders/j1/w737rkrx5tj77_4ndd4wl2cw0000gp/T/TemporaryItems/NSIRD_screencaptureui_NgW5dl/Screenshot 2022-03-28 at 7.20.38 PM.png)
 
-![](../../../../var/folders/j1/w737rkrx5tj77_4ndd4wl2cw0000gp/T/TemporaryItems/NSIRD_screencaptureui_B6FCLE/Screenshot 2022-03-28 at 7.23.33 PM.png)
-
-![](../../../../var/folders/j1/w737rkrx5tj77_4ndd4wl2cw0000gp/T/TemporaryItems/NSIRD_screencaptureui_rNTPBl/Screenshot 2022-03-28 at 7.24.12 PM.png)
-
-![](../../../../var/folders/j1/w737rkrx5tj77_4ndd4wl2cw0000gp/T/TemporaryItems/NSIRD_screencaptureui_nLVpa6/Screenshot 2022-03-28 at 7.24.40 PM.png)
 
